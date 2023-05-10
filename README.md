@@ -6,7 +6,7 @@ A good model is the one that will have pvalues less than 0.05.
 You can then predict the volatility of the currency pair you choose.
 
 
-Copyright [2023] [Wali Mohamed]
+__Copyright [2023] [Wali Mohamed]__
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
