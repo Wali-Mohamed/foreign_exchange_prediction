@@ -4,10 +4,12 @@ body{
 h1, h2{
     text-align: center;
 }
+.title {
+  color:palegreen;
+}
 .home-pic {
-    width: 50%;
-    margin-right: auto;
-    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
 }
 .curr_data {
     background-color: rgb(6, 31, 158);
@@ -31,11 +33,12 @@ form.data{
 
 #instruct {
     display: block;
-    color: rgb(179, 118, 26);
+    color:rgb(146, 98, 7);
     font-size: 15px;
     text-align: center;
-    width: 50%;
+    width: 60%;
     margin: auto;
+    margin-bottom: 10px;
     
 }
 
@@ -137,7 +140,7 @@ table.dataframe > thead > tr > td
 
 
   @media only screen and (min-width: 750px) {
-    table {
+    table, #instruct {
       font-size: 15px;
       
     }
@@ -148,7 +151,7 @@ table.dataframe > thead > tr > td
   }
 
   @media only screen and (min-width: 1000px) {
-    table {
+    table, #instruct {
       font-size: 20px;
     }
     .result_table, .train button, .get_data button {
