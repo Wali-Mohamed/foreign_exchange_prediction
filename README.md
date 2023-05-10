@@ -6,13 +6,14 @@ A good model is the one that will have pvalues less than 0.05.
 You can then predict the volatility of the currency pair you choose.
 
 
+### Apache License
 __Copyright [2023] [Wali Mohamed]__
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-[full details link to apache](https://www.apache.org/licenses/LICENSE-2.0/)
+[for full details, click on the link to apache.org](https://www.apache.org/licenses/LICENSE-2.0/)
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
