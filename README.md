@@ -1,4 +1,4 @@
-# foreign_exchange_prediction
+## foreign_exchange_prediction
 This app is for getting latest foreign exchange data of any physical currency
 You can then train the model by choosing two parameter p and q
 You can choose value 1, 2, 3, 4 or 5.
@@ -12,7 +12,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-    [full details link to apache](https://www.apache.org/licenses/LICENSE-2.0/)
+[full details link to apache](https://www.apache.org/licenses/LICENSE-2.0/)
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
