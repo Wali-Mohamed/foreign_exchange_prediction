@@ -1,4 +1,4 @@
-## foreign_exchange_prediction
+## Foreign Exchange Volatility Pediction
 This app is for getting latest foreign exchange data of any physical currency
 You can then train the model by choosing two parameter p and q
 You can choose value 1, 2, 3, 4 or 5.
