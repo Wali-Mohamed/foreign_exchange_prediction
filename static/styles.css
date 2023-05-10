@@ -1,0 +1,158 @@
+body{
+    background-color: rgb(175, 202, 162);
+}
+h1, h2{
+    text-align: center;
+}
+.home-pic {
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.curr_data {
+    background-color: rgb(6, 31, 158);
+    color: #ffffff;
+    font-size: 10px;
+    
+}
+
+.summary {
+    width: 30%;
+    margin: auto;
+}
+
+
+
+ /* why this line is affecting train data as well as get data */
+form.data{
+    display: block;
+    
+}
+
+#instruct {
+    display: block;
+    color: rgb(179, 118, 26);
+    font-size: 15px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    
+}
+
+form {
+    width: 80%;
+    margin: auto;
+    
+    
+   
+
+}
+
+
+.train button, .get_data button {
+    display:block;
+    
+    height:auto;
+    font-size: 15px;
+    width: 50%;
+    margin: auto;
+    
+
+}
+
+
+
+
+
+
+table{
+    table-layout: fixed;
+    border:1px solid black;
+     
+    
+    
+  }
+  table.dataframe > thead > tr > th,
+  table.dataframe > tbody > tr > th,
+table.dataframe > tbody > tr > td,
+table.dataframe > thead > tr > td
+ {
+    width: 25%;
+    margin: auto;
+    border: 1px solid black;
+    text-align: center;
+    font-weight: bold ;
+  }
+
+  
+  table.result_table>  thead> tr,
+  table.result_table> thead > tr > th,
+  table.result_table > tbody > tr > td
+  
+   {
+    
+    
+    border: 2px solid rgb(58, 58, 52);
+    text-align: center;
+    font-weight: bold ;
+    
+  }
+  table.result_table>  thead {
+    background-color: aqua;
+  }
+  
+
+  .result_table {
+    width: 70%;
+    margin: auto;
+
+  }
+
+  .predict-form  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:black;
+    font-size: 15px;
+    
+    min-height:50px;
+    
+    width: 80%;
+    margin: auto;
+  }
+  .predict_result {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:black;
+    font-size: 15px;
+    min-height:50px;
+    border:2px rgb(30, 255, 0) solid;
+    background-color:rgb(255, 255, 255);
+    width: 80%;
+    margin: auto;
+  }
+
+
+  @media only screen and (min-width: 750px) {
+    table {
+      font-size: 15px;
+      
+    }
+    .result_table,.train button, .get_data button {
+      font-size: 20px;
+      
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
+    table {
+      font-size: 20px;
+    }
+    .result_table, .train button, .get_data button {
+      font-size: 25px;
+    }
+  }
+  

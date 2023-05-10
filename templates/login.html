@@ -1,0 +1,14 @@
+{%extends 'base.html' %}
+
+{%block title %}Login Page{%endblock%}
+ {%block content%}
+ 
+
+<h1> {{curr1+'/'+curr2}} </h1>
+      
+    <table>
+    {{data|safe}}
+  </table>
+  <div class="goback"><a class="goback" href="{{url_for('Home')}}">Main Menu</a>
+  </div>
+{%endblock%}

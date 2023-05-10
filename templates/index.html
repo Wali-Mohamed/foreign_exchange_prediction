@@ -1,0 +1,149 @@
+{%extends 'base.html'%}
+
+{%block title %}Currency Data{%endblock%}
+
+
+
+{%block content%}
+
+<h1>Currency Volatility Prediction</h1>
+<div class="get_data">
+  <h2>Get the latest currency data</h2>
+  <form class='data' action="{{url_for('get_data')}}" method='POST'>
+    
+    <label for="instruct" id="instruct">Enter currency symbol like GBP for British Pounds Sterling</label>
+    
+    <div class="row  d-flex justify-content-center">
+      <div class="col-sm-6 col-md-3 text-center">
+    
+    <label for="fname">From:</label>
+      </div>
+      <div class="col-sm-6 col-md-3 text-center">
+    <input class="text-center"  type="text" id="fname" name="from_c" placeholder="currency symbol like 'GBP'" , value="GBP">
+      </div>
+    </div>
+    <div class="row  d-flex justify-content-center">
+      <div class="col-sm-6 col-md-3 text-center">
+    <label for="lname">To:</label>
+    </div>
+    <div class="col-sm-6 col-md-3 text-center">
+    <input class="text-center" type="text" id="lname" name="to_c" placeholder="currency symbol like 'USD'" , value="USD">
+  </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-6">
+    <button>Submit</button>
+  </div>
+  </div>
+  </form>
+  <div class="curr_data">
+
+    <h1> {{table_name}} </h1>
+     <div class="row justify-content-center">
+     <div class="col-sm-12">
+    <table class="data" >
+      {{data|safe}}
+    </table>
+  </div>
+  </div>
+
+  </div>
+
+</div>
+
+
+
+<h2>Specify model parameters</h2>
+
+  
+<form class='train' action="{{ url_for('train')}}" method="post">
+  <div class="row  d-flex justify-content-center">
+  <div class="col-sm-6 col-md-3 text-center">
+  <label class="border border-dark p-1 " for="p_value">Enter p value</label>
+  </div>
+  <div class="col-sm-6 col-md-3 text-center">
+  <input class="text-center"  type="text" name="p" placeholder="value of p" value=1 required="required" />
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-sm-6 col-md-3 text-center">
+  <label class="border border-dark p-1" for="q_value">Enter q value</label>
+  </div>
+  <div class="col-sm-6 col-md-3 text-center">
+  <input class="text-center" type="text" name="q" placeholder="value of q" value=1 required="required" /><br>
+</div>
+  </div>
+  <div class="row justify-content-center">
+  <div class="col-6">
+
+  <button type="submit" class="">Train</button><br>
+</div>
+</div>
+</form>
+  
+
+<div class="summary">
+  
+    
+    {{model_pvalues|safe}}
+  
+
+</div>
+
+
+
+<div class="predict">
+  <h2>Predict the daily volatility</h2>
+
+
+  <!-- Main Input For Receiving Query to our ML -->
+  <form class="predict-form" action="{{ url_for('predict')}}" method="post">
+    <input class="text-center" type="text" name="curr1" placeholder="from currency" required="required" />
+    <input class="text-center" type="text" name="curr2" placeholder="to currency" required="required" />
+    <input class="text-center" type="text" name="days" placeholder="Number of Days" required="required" />
+    
+
+    <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+  </form>
+
+</div>
+
+<div class="predict_result">
+  <table class="result_table">
+    <thead>
+      <tr>
+        <th>{{date_header}}</th>
+        <th>{{predictions_header}}</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for date, vol in new_data %}
+
+      <tr class="rows">
+
+
+        <td> {{date}}</td>
+        <td>{{vol}} </td>
+
+      </tr>
+      {% endfor %}
+
+
+
+
+
+
+
+
+    </tbody>
+  </table>
+
+
+</div>
+{%endblock%}
+</body>
+
+</html>
