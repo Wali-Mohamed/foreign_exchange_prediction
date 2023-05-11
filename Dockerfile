@@ -1,6 +1,9 @@
 FROM python:3.10
+WORKDIR /exchange
+COPY . /exchange
 
-ADD app.py .
-RUN pip install flask pandas numpy glob datetime joblib sqlite arch requests
+
+RUN pip install -r requirements.txt
+EXPOSE 3000
 
 CMD ["python", "./app.py"]
