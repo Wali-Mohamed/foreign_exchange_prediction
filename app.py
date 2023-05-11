@@ -1,11 +1,11 @@
-#import numpy as np
+import numpy as np
 from glob import glob
 
 import pandas as pd
 import random
 from flask import Flask, request, jsonify, render_template, session
 from datetime import timedelta
-import pickle
+
 import joblib
 import requests
 from config import settings
