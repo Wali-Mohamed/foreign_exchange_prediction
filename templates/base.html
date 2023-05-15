@@ -12,10 +12,10 @@
   
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container">
+    <nav class="navbar navbar-expand-md bg-body-tertiary">
+        <div class="container text-center justify-content-between">
           <a class="navbar-brand title" href="#">Foreign Exchange Rate Volatility Prediction</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -44,8 +44,12 @@
     {%block content%}
 
     <div class="home-pic">
-    <img id="home1" src="../static/exchange2.jpg" alt="exchange rate pic" width="500" height="400">
-    <img id="home2" src="../static/google-image.jpg" alt="exchange rate pic" width="500" height="400">
+      <div>
+        <img id="home1" src="../static/exchange2.jpg" alt="exchange rate pic" width="300" height="300">
+      </div>
+      <div>
+        <img id="home2" src="../static/google-image.jpg" alt="exchange rate pic" width="300" height="300">
+      </div>
     </div>
     
     {%endblock%}

@@ -1,5 +1,6 @@
 body{
     background-color: rgb(175, 202, 162);
+    
 }
 h1, h2{
     text-align: center;
@@ -7,11 +8,14 @@ h1, h2{
 .title {
   color:black;
   font-size: 12px;
+  font-weight: bolder;
 }
 .home-pic {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    height: 800px;
 }
 .curr_data {
     background-color: rgb(6, 31, 158);
@@ -153,13 +157,26 @@ table.dataframe > thead > tr > td
   }
 
   @media only screen and (min-width: 1000px) {
-    table, #instruct, .title {
+    table, #instruct {
       font-size: 20px;
+    }
+    .title {
+      font-size: 35px;
+      font-weight: bolder;
     }
     .result_table, .train button, .get_data button, .predict {
       font-size: 30px;
       width: 50%;
       
     }
+    .home-pic {
+      display: flex;
+      justify-content:space-evenly;
+      flex-direction: row;
+      align-items: start;
+     
+      
+      
+  }
   }
   
