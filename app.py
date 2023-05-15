@@ -50,15 +50,17 @@ def get_data():
     data1=df.head()
     data2=data1.close.values
     data=df.head().to_html()
-    table_name=from_curr+'/'+to_curr
-    return render_template("index.html", data=data, table_name=table_name)
+    table_name1=from_curr+'/'+to_curr
+    table_name=from_curr+'_'+to_curr
+    repo.insert_table(table_name, records=df, if_exists="replace")
+    return render_template("index.html", data=data, table_name=table_name1)
     
 @flask_app.route("/t", methods = ["GET", "POST"])
 def train():
     curr1=session['from_curr']
     curr2=session['to_curr']
       
-    class_model=GarchModel(from_curr=curr1,to_curr=curr2, repo=repo, use_new_data=True)
+    class_model=GarchModel(from_curr=curr1,to_curr=curr2, repo=repo, use_new_data=False)
     class_model.wrangle_data(n_observations=2500)
     p=int(request.form['p'])
     q=int(request.form['q'])
