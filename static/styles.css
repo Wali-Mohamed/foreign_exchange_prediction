@@ -54,12 +54,12 @@ form {
 }
 
 
-.train button, .get_data button {
+.train button, .get_data button, .predict {
     display:block;
     
     height:auto;
     font-size: 20px;
-    width: 50%;
+    width: 80%;
     margin: auto;
     
 
@@ -123,7 +123,7 @@ table.dataframe > thead > tr > td
     
     min-height:50px;
     
-    width: 80%;
+    width: 50%;
     margin: auto;
   }
   .predict_result {
@@ -156,8 +156,10 @@ table.dataframe > thead > tr > td
     table, #instruct, .title {
       font-size: 20px;
     }
-    .result_table, .train button, .get_data button {
+    .result_table, .train button, .get_data button, .predict {
       font-size: 30px;
+      width: 50%;
+      
     }
   }
   
