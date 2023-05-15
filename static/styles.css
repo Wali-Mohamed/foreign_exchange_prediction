@@ -7,7 +7,7 @@ h1, h2{
 }
 .title {
   color:black;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: bolder;
 }
 .home-pic {
@@ -150,7 +150,7 @@ table.dataframe > thead > tr > td
       font-size: 15px;
       
     }
-    .result_table,.train button, .get_data button {
+    .result_table,.train button, .get_data button, .title {
       font-size: 20px;
       
     }
@@ -161,7 +161,7 @@ table.dataframe > thead > tr > td
       font-size: 20px;
     }
     .title {
-      font-size: 35px;
+      font-size: 33px;
       font-weight: bolder;
     }
     .result_table, .train button, .get_data button, .predict {
