@@ -11,23 +11,23 @@
   <h2>Get the latest currency data</h2>
   <form class='data' action="{{url_for('get_data')}}" method='POST'>
     
-    <label for="instruct" id="instruct">Enter currency symbol like GBP for British Pounds Sterling</label>
+    <label for="instruct" id="instruct">Enter currency symbol e.g. GBP for British Pounds Sterling</label>
     
     <div class="row  d-flex justify-content-center">
       <div class="col-sm-6 col-md-3 text-center">
     
-    <label for="fname">From:</label>
+    <label class="border border-dark p-1" for="fname">From </label>
       </div>
       <div class="col-sm-6 col-md-3 text-center">
-    <input class="text-center"  type="text" id="fname" name="from_c" placeholder="currency symbol like 'GBP'" , value="">
+    <input class="text-center border-dark"  type="text" id="fname" name="from_c" placeholder="currency symbol like 'GBP'" , value="">
       </div>
     </div>
     <div class="row  d-flex justify-content-center">
       <div class="col-sm-6 col-md-3 text-center">
-    <label for="lname">To:</label>
+    <label class="border border-dark p-1"  for="lname">To </label>
     </div>
     <div class="col-sm-6 col-md-3 text-center">
-    <input class="text-center" type="text" id="lname" name="to_c" placeholder="currency symbol like 'USD'" , value="USD">
+    <input class="text-center " type="text" id="lname" name="to_c" placeholder="currency symbol like 'USD'" , value="USD">
   </div>
   </div>
   <div class="row justify-content-center">
@@ -103,7 +103,7 @@
     <input class="text-center" type="text" name="days" placeholder="Number of Days" required="required" />
     
 
-    <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    <button type="submit" class="btn btn-block btn-large">Predict</button>
   </form>
 
 </div>

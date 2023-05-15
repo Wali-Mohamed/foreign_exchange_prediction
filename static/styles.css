@@ -5,11 +5,13 @@ h1, h2{
     text-align: center;
 }
 .title {
-  color:palegreen;
+  color:black;
+  font-size: 12px;
 }
 .home-pic {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .curr_data {
     background-color: rgb(6, 31, 158);
@@ -56,7 +58,7 @@ form {
     display:block;
     
     height:auto;
-    font-size: 15px;
+    font-size: 20px;
     width: 50%;
     margin: auto;
     
@@ -151,11 +153,11 @@ table.dataframe > thead > tr > td
   }
 
   @media only screen and (min-width: 1000px) {
-    table, #instruct {
+    table, #instruct, .title {
       font-size: 20px;
     }
     .result_table, .train button, .get_data button {
-      font-size: 25px;
+      font-size: 30px;
     }
   }
   
