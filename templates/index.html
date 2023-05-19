@@ -16,18 +16,44 @@
     <div class="row  d-flex justify-content-center">
       <div class="col-sm-6 col-md-3 text-center">
     
-    <label class="border border-dark p-1" for="fname">From </label>
+    <label class="border border-dark p-1" for="from_c">From </label>
       </div>
       <div class="col-sm-6 col-md-3 text-center">
-    <input class="text-center border-dark"  type="text" id="fname" name="from_c" placeholder="currency symbol like 'GBP'" , value="">
+        <select class="text-center border-dark" name="from_c" id="from_c" >
+          <option value=""disabled selected hidden >currency symbol e.g. 'GBP'</option>
+          <option value="GBP" >GBP: British Pounds</option>
+          <option value="EUR">EUR: Euro</option>
+          <option value="SAR">SAR: Saudi Riyals</option>
+          <option value="KES">KES: Kenyan Shillings</option>
+          <option value="OMR">OMR: Oman Riyals</option>
+          <option value="EGP">EGP: Egyptian Pounds</option>
+          <option value="USD">USD: US Dollars</option>
+          <option value="TRY">TRY: Turkish Lira</option>
+          <option value="INR">INR: Indian Rupee</option>
+          <option value="CNY">CNY: Chinese Yuan</option>
+        </select>
+    
       </div>
     </div>
     <div class="row  d-flex justify-content-center">
       <div class="col-sm-6 col-md-3 text-center">
-    <label class="border border-dark p-1"  for="lname">To </label>
+    <label class="border border-dark p-1"  for="to_c">To </label>
     </div>
     <div class="col-sm-6 col-md-3 text-center">
-    <input class="text-center " type="text" id="lname" name="to_c" placeholder="currency symbol like 'USD'" , value="USD">
+      <select class="text-center border-dark" id="to_c" name="to_c" id="tocurr" >
+        <option value=""disabled selected hidden >currency symbol e.g. 'USD'</option>
+        <option value="GBP" >GBP: British Pounds</option>
+        <option value="EUR">EUR: Euro</option>
+        <option value="SAR">SAR: Saudi Riyals</option>
+        <option value="KES">KES: Kenyan Shillings</option>
+        <option value="OMR">OMR: Oman Riyals</option>
+        <option value="EGP">EGP: Egyptian Pounds</option>
+        <option value="USD">USD: US Dollars</option>
+        <option value="TRY">TRY: Turkish Lira</option>
+        <option value="INR">INR: Indian Rupee</option>
+        <option value="CNY">CNY: Chinese Yuan</option>
+      </select>
+    
   </div>
   </div>
   <div class="row justify-content-center">
@@ -51,8 +77,23 @@
 
 </div>
 <hr>
+<div class="explain-head">
+  <h4>Training the Model to predict Currency Volatility</h4>
+  <p> To train the model, you need to choose random numbers for p and q. <br>
+    It is recommended to start with a value of 1 and test it and if the result is not good then increase the number.
+    <ul>
+      <li>Enter the values and p and q</li>
+      <li>Run the training by clicking on train button</li>
+      <li>Check the result of p_value generated</li>
+      <li>You want to get all or most of them to be below 0.05</li>
+      <li>This is the hypothesis analysis and it means that the results of the training is significant</li>
+      <li>Move on to the prediction part to get the volatility</li>
+
+    </ul>
 
 
+  </p>
+</div>
 
 <h2>Specify model parameters</h2>
 
@@ -63,7 +104,7 @@
   <label class="border border-dark p-1 " for="p_value">Enter p value</label>
   </div>
   <div class="col-sm-6 col-md-3 text-center">
-  <input class="text-center"  type="text" name="p" placeholder="value of p" value=1 required="required" />
+  <input class="text-center"   id="p_value" type="text" name="p" placeholder="value of p" value=1 required="required" />
   </div>
 </div>
 <div class="row justify-content-center">
@@ -71,7 +112,7 @@
   <label class="border border-dark p-1" for="q_value">Enter q value</label>
   </div>
   <div class="col-sm-6 col-md-3 text-center">
-  <input class="text-center" type="text" name="q" placeholder="value of q" value=1 required="required" /><br>
+  <input class="text-center" type="text" name="q" placeholder="value of q" value=1 id="q_value" required="required" /><br>
 </div>
   </div>
   <div class="row justify-content-center">
@@ -99,8 +140,9 @@
 
   <!-- Main Input For Receiving Query to our ML -->
   <form class="predict-form" action="{{ url_for('predict')}}" method="post">
-    <input class="text-center" type="text" name="curr1" placeholder="from currency" required="required" />
-    <input class="text-center" type="text" name="curr2" placeholder="to currency" required="required" />
+    
+    <input class="text-center" type="text" name="curr1" placeholder="from currency: Enter symbol" required="required" />
+    <input class="text-center" type="text" name="curr2" placeholder="to currency: Enter symbol" required="required" />
     <input class="text-center" type="text" name="days" placeholder="Number of Days" required="required" />
     
 

@@ -1,3 +1,4 @@
+
 import numpy as np
 from glob import glob
 
@@ -43,22 +44,29 @@ def get_data():
     session.permanent=True
     session['from_curr']=from_curr
     session['to_curr']=to_curr
+    datalist=[x for x in request.form.values()]
+    print(datalist)
     
     
     currency_class= AlphaVantageAPI()
     df=currency_class.fx_daily(from_symbol=from_curr, to_symbol=to_curr, output_size='full')
+    
     data1=df.head()
     data2=data1.close.values
-    data=df.head().to_html()
+    currency_data=df.head().to_html()
+    session['currencydata']=currency_data
     table_name1=from_curr+'/'+to_curr
+    session['tablename']=table_name1
     table_name=from_curr+'_'+to_curr
     repo.insert_table(table_name, records=df, if_exists="replace")
-    return render_template("index.html", data=data, table_name=table_name1)
+    return render_template("index.html", data=currency_data, table_name=table_name1)
     
 @flask_app.route("/t", methods = ["GET", "POST"])
 def train():
     curr1=session['from_curr']
     curr2=session['to_curr']
+    table_name1=session['tablename']
+    currency_data=session['currencydata']
       
     class_model=GarchModel(from_curr=curr1,to_curr=curr2, repo=repo, use_new_data=False)
     class_model.wrangle_data(n_observations=2500)
@@ -75,7 +83,7 @@ def train():
     class_model.dump()
    
 
-    return render_template('index.html', model_pvalues=data )
+    return render_template('index.html', model_pvalues=data, data=currency_data, table_name=table_name1 )
 
 @flask_app.route("/p", methods = ["POST"])
 def predict():

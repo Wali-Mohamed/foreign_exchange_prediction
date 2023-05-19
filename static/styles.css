@@ -18,10 +18,16 @@ h1, h2{
     height: 800px;
 }
 .curr_data {
-    background-color: rgb(6, 31, 158);
+    /* background-color: rgb(6, 31, 158); */
     color: #ffffff;
-    font-size: 10px;
     
+    
+}
+.explain-head>h4 {
+  /* background-color: aqua; */
+  /* border: black 1px solid; */
+  width: 80%;
+  margin: auto;
 }
 
 .summary {
@@ -75,19 +81,22 @@ form {
 
 
 table{
-    table-layout: fixed;
+    table-layout:fixed;
     border:1px solid black;
+    width: 80%;
+    margin: auto;
+    font-size: 8px;
      
     
     
   }
   table.dataframe > thead > tr > th,
   table.dataframe > tbody > tr > th,
-table.dataframe > tbody > tr > td,
-table.dataframe > thead > tr > td
+  table.dataframe > tbody > tr > td,
+  table.dataframe > thead > tr > td
  {
-    width: 25%;
-    margin: auto;
+    /* width: 20%;
+    margin: auto; */
     border: 1px solid black;
     text-align: center;
     font-weight: bold ;
