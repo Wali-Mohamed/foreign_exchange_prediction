@@ -45,15 +45,20 @@ def get_data():
     session['from_curr']=from_curr
     session['to_curr']=to_curr
     datalist=[x for x in request.form.values()]
-    print(datalist)
+    
     
     
     currency_class= AlphaVantageAPI()
     df=currency_class.fx_daily(from_symbol=from_curr, to_symbol=to_curr, output_size='full')
     
     data1=df.head()
-    data2=data1.close.values
-    currency_data=df.head().to_html()
+    print(data1)
+    for column in data1.columns:
+        
+        data1[column]=round(data1[column],2)
+         
+    
+    currency_data=data1.head().to_html()
     session['currencydata']=currency_data
     table_name1=from_curr+'/'+to_curr
     session['tablename']=table_name1
