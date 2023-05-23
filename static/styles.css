@@ -22,7 +22,7 @@ h1, h2{
     height: 800px;
 }
 
-.explain-head>h4 {
+.explain-head {
   /* background-color: aqua; */
   /* border: black 1px solid; */
   width: 80%;
