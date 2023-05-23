@@ -1,6 +1,10 @@
 body{
-    background-color: rgb(175, 202, 162);
+    background-color: #d6f49d;
+    color:#2f243a;
     
+}
+nav  {
+  background-color: #86bbd8;
 }
 h1, h2{
     text-align: center;
@@ -17,12 +21,7 @@ h1, h2{
     align-items: center;
     height: 800px;
 }
-.curr_data {
-    /* background-color: rgb(6, 31, 158); */
-    color: #ffffff;
-    
-    
-}
+
 .explain-head>h4 {
   /* background-color: aqua; */
   /* border: black 1px solid; */
@@ -45,7 +44,7 @@ form.data{
 
 #instruct {
     display: block;
-    color:rgb(146, 98, 7);
+    color:#ba2d0b;
     font-size: 15px;
     text-align: center;
     width: 60%;
@@ -54,7 +53,7 @@ form.data{
     
 }
 
-form {
+form, .predict{
     width: 80%;
     margin: auto;
     
@@ -64,8 +63,9 @@ form {
 }
 
 
-.train button, .get_data button, .predict {
+.train button, .get_data button, .predict button {
     display:block;
+    background-color: #86bbd8;
     
     height:auto;
     font-size: 20px;
@@ -131,7 +131,7 @@ table{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color:black;
+    
     font-size: 15px;
     
     min-height:50px;
@@ -144,7 +144,7 @@ table{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color:black;
+    
     font-size: 15px;
     min-height:50px;
     border:2px rgb(30, 255, 0) solid;
