@@ -101,7 +101,7 @@ table{
     text-align: center;
     font-weight: bold ;
   } 
-  table.dataframe > thead > tr > th,
+  
   table.dataframe > tbody > tr > th{
     font-size: 8px;
   }
@@ -157,7 +157,7 @@ table{
     margin: auto;
   }
   @media only screen and (min-width: 450px) {
-    table.dataframe > thead > tr > th,
+    
   table.dataframe > tbody > tr > th{
       font-size: 12px;
   }
@@ -168,6 +168,9 @@ table{
       font-size: 18px;
       
     }
+    table.dataframe > tbody > tr > th{
+      font-size: 18px;
+  }
     .result_table,.train button, .get_data button, .title {
       font-size: 20px;
       
@@ -178,6 +181,9 @@ table{
     table, #instruct {
       font-size: 25px;
     }
+    table.dataframe > tbody > tr > th{
+      font-size: 20px;
+  }
     .title {
       font-size: 33px;
       font-weight: bolder;
